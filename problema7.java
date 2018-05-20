@@ -11,34 +11,44 @@ import java.util.Scanner;
 la media de todos ellos.
  */
 public class problema7 {
-  public static void main(String[] args) {
+
+    public static void main(String[] args) {
+
+        /*
+        Por buenas practicas y legibilidad, es recomendable colocar las variables separadas.
+         */
+        int num;
+        int max = 0;
+        int min = 0;
+        int suma = 0;
+        double media = 0;
+
         Scanner entrada = new Scanner(System.in);
-       int num, max = 0, min = 0, suma=0;
-       double media=0;
- 
+
         for (int i = 0; i < 5; i++) {
             System.out.print("Introduce un número entero ");
             num = entrada.nextInt();
-              //La variable suma almacenara los valores que se vayan pasando por teclado
-                suma=suma+num;
+            //La variable suma almacenara los valores que se vayan pasando por teclado
+            suma = suma + num;
+
             if (min != 0 && max != 0) {
-             
+
                 if (num > max) {
                     max = num;
                 }
                 if (num < min) {
                     min = num;
                 }
-            }
-            else {
+            } else {
                 min = num;
                 max = num;
             }
-          
-            media=(double)suma/5;
+
+            media = suma / 5; // el (double) no es necesario en estos casos
         }
         System.out.println("El número máximo es " + max);
         System.out.println("El número mínimo es " + min);
-        System.out.println("La media es de "+ media);
+        System.out.println("La suma de todos los valores es " + suma); // Falto imprimir la suma
+        System.out.println("La media de todos los valores es " + media);
     }
 }
