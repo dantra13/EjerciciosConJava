@@ -13,10 +13,11 @@ la media de todos ellos.
 public class problema7 {
   public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int num, media=0, max = 0, min = 0, suma=0;
+       int num, max = 0, min = 0, suma=0;
+       double media=0;
  
         for (int i = 0; i < 5; i++) {
-            System.out.print("Introduce un número entero");
+            System.out.print("Introduce un número entero ");
             num = entrada.nextInt();
               //La variable suma almacenara los valores que se vayan pasando por teclado
                 suma=suma+num;
@@ -34,7 +35,7 @@ public class problema7 {
                 max = num;
             }
           
-            media=suma/5;
+            media=(double)suma/5;
         }
         System.out.println("El número máximo es " + max);
         System.out.println("El número mínimo es " + min);
