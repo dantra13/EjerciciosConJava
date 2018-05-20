@@ -19,7 +19,8 @@ public class problema7 {
             System.out.print("Introduce un número entero");
             num = entrada.nextInt();
             if (min != 0 && max != 0) {
-               suma=suma+num;
+               //La variable suma almacenara los valores que se vayan pasando por teclado
+                suma=suma+num;
                 if (num > max) {
                     max = num;
                 }
